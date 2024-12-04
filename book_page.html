@@ -2,6 +2,9 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Sida i lärande syfte där jag skapparen av sidan kan skriva mina omdömen för bökerna jag läser">
+    <meta name="author" content="Beatrice olsson">
+    <link rel="stylesheet" href="styleSheat.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bokresensioner Av Bea</title>
 </head>
@@ -9,16 +12,15 @@
     <header><!--läg till bild/text som kommer att vara högst upp på sidan.Skall finas med på de andra sidorna-->
         <img src="Bilder/icons8-book-64.png" alt="Ikån av bok." title="Ikån av bok.">
         <h1>Min Virtuel Bibliotek</h1>
-    </header>
-    <nav><!--Länkar till de andra sidor, skappa layout och sen efter han läga till länkarna.Skall finas med på de andra sidorna-->
         <ul>
-            <li class="header_list"><a href="index.html" target="_self">Home</a></li>
-            <li class="header_list">Böker</li>
-            <li class="header_list">Om Mig</li>
+            <li class="header_list"><a href="index.html">Home</a></li>
+            <li class="header_list"><a href="book_page.html">Bok</a></li><!--Skappa en drop down med alternativ till sidor-->
+            <li class="header_list"><a href="about_me.html">Om Mig</a></li>
         </ul>
-    </nav>
+    </header>
     <section><!--Den senaste inlägda bock med bild och text. Kolla om den skall bryta efter en vis antal text och en klicka på läs mer knap.-->
         <img src="Bilder/36544276.jpg" alt="Omslagsbild för bok Carry on, Jeeves" title="Carry on, Jeeves bok omslag" height="500px">
+        <img src="Bilder/7963.jpg" alt="Bild på P.G.Wodehouse" titel="Bild på förfataren P.G.Wodehouse" height="500px"><!--Skappa JS funtion för att kunna blädra mellan bilderna-->
         <h2>Carry on, Jeeves</h2>
         <h3>Förfatare: P.G.Wodehouse</h3>
         <h3>Antal sidor: 304</h3>
@@ -26,19 +28,34 @@
         <h3>Utgivardatum: 2018-06-28</h3>
         <h3>Länk till <a href="https://www.adlibris.com/se/bok/carry-on-jeeves-9781787461079?utm_source=google&utm_medium=cpc&utm_campaign=AR:+BOK+-+pMAX+Shopping+-+Generic+-+B%C3%B6cker+ENG&gad_source=1&gclid=CjwKCAiAl4a6BhBqEiwAqvrqunR3kbYFr2dknYLqwLoDqCcYzf3Acmei1hzjyEeeJ_2CGaZgqbJC_xoCZQ0QAvD_BwE" target="_blank" rel="noopener">Adlibris</a></h3>
         <h3>Beskrivning</h3>
-        <p>In Carry On, Jeeves, P.G. Wodehouse introduces readers to the delightful world of Bertie Wooster and his extraordinary valet, Jeeves. This collection of ten brilliantly crafted short stories follows Bertie—a lovable but hapless young gentleman—and Jeeves, whose razor-sharp intellect and impeccable timing are the antidote to every sticky situation Bertie finds himself in.<br>
-            From thwarting disastrous engagements to outsmarting meddlesome aunts and solving romantic tangles for Bertie’s equally bumbling friends, Jeeves’s genius is unmatched. Whether ghostwriting letters for a bohemian artist, breaking ill-advised betrothals, or concocting schemes to win the favor of overbearing relatives, Jeeves always has a plan.<br>
-            Each story is brimming with Wodehouse’s trademark humor, clever wordplay, and absurdly entertaining scenarios. Bertie’s narrative voice—witty, exaggerated, and charmingly clueless—provides the perfect counterpoint to Jeeves’s calm and composed demeanor. Together, their dynamic is a comedic masterstroke, creating a world where life’s mishaps become a source of endless amusement.<br>
-            Whether it’s The Artistic Career of Corky, where Jeeves attempts to help an artist win his uncle’s approval, or Clustering Round Young Bingo, featuring Bertie’s hopelessly romantic friend and his latest misadventure, every tale in this collection is a gem. Jeeves, with his unerring sense of propriety and quiet brilliance, always emerges as the hero, rescuing Bertie and his friends with solutions as ingenious as they are hilarious.<br>
-            Set in the whimsical world of British upper-class society, Carry On, Jeeves gently pokes fun at the idle rich while delivering timeless humor. With its sharply drawn characters, ingenious plots, and sparkling prose, this collection is perfect for fans of witty, lighthearted comedy.
-            Step into the laugh-out-loud world of Bertie and Jeeves, where no predicament is too absurd, no scheme too complex, and no master-servant relationship quite as entertaining.
+        <p>I Carry On, Jeeves bjuder P.G. Wodehouse in läsarna till den underhållande världen kring Bertie Wooster och hans extraordinära betjänt, Jeeves. Denna samling med tio skickligt skrivna noveller följer Bertie – en charmig men hopplös ung gentleman – och Jeeves, vars sylvassa intelligens och felfria timing alltid är lösningen på de knipor Bertie ständigt råkar hamna i.<br>
+            Från att avvärja katastrofala förlovningar till att överlista besvärliga mostrar och reda ut romantiska förvecklingar för Berties lika förvirrade vänner, är Jeeves genialitet oöverträffad. Oavsett om han författar brev åt en bohemisk konstnär, bryter opassande förbindelser eller utformar listiga planer för att vinna över påstridiga släktingar, har Jeeves alltid en lösning.<br>
+            Varje berättelse sprakar av Wodehouses karakteristiska humor, fyndiga språk och absurt underhållande scenarier. Berties berättarröst – kvick, överdriven och charmigt naiv – utgör en perfekt kontrast till Jeeves lugna och behärskade framtoning. Tillsammans skapar de en dynamik som är en komisk fullträff, där livets missöden förvandlas till oändlig underhållning.<br>
+            Oavsett om det är The Artistic Career of Corky, där Jeeves försöker hjälpa en konstnär att vinna sin farbrors gillande, eller Clustering Round Young Bingo, som handlar om Berties hopplöst romantiske vän och hans senaste kärleksproblem, är varje berättelse i denna samling en riktig pärla. Jeeves, med sin osvikliga känsla för takt och sin tysta briljans, framstår alltid som hjälten, som räddar Bertie och hans vänner med lösningar som är lika geniala som de är roliga.<br>
+            Med sin humoristiska skildring av det brittiska överklassamhället driver Carry On, Jeeves lättsamt med de rikas lata livsstil, samtidigt som den levererar tidlös komedi. Med sina skarpt tecknade karaktärer, geniala intriger och gnistrande språk är denna samling perfekt för alla som älskar kvicka och lättsamma skratt.<br>
+            Kliv in i Bertie och Jeeves skrattretande värld, där ingen knipa är för absurd, ingen plan för komplicerad och inget herrskap-tjänsteförhållande lika underhållande som detta.
         </p>
         <h3>Omdöme</h3>
         <p></p>
     </section>
-
+    <form action="/sumit" method="post">
+        <h3>Feadback från läsare:</h3>
+        <input type="radio" id="planingToRead" name="toRead" value="planingToRead" checked="checked">
+        <label for="planingToRead">Plannerar att läsa boken.</label>
+        <input type="radio" id="wontReadNow" name="toRead" value="wontReadNow">
+        <label for="wontReadNow">Kommer inte att läsa boken i snarligast tid men i framtiden.</label>
+        <input type="radio" id="wontEverRead" name="toRead" value="wontEverRead">
+        <label for="wontEverRead">Kommer aldrig att läsa.</label>
+        <label for="bookFeadback"><h3>Kommentarer:</h3></label>
+        <textarea id="bookFeadback" name="bookFeadback" rows="4" cols="50"></textarea>
+        <button type="submit"><h3>Skicka</h3></button>
+        <button type="reset"><h3>Ta bort</h3></button>
+    </form>
     <footer><!--Text om att sidan är utformad i lärande syfte samt länk till de andra sidorna.Skall finas med på de andra sidorna-->
         <p>Tack för besöket på min hemsida.<br>Sidan är skappad för lärande syfte och personlig utveckling som programerare. </p>
+        <a href="https://www.facebook.com/beatrice.olsson.12" target="_blank" rel="noopener"><img src="Bilder/icons8-facebook-50 (1).png" alt="Facebok Ikån"> </a>
+        <a href="https://www.linkedin.com/in/beatrice-olsson/" target="_blank" rel="noopener"><img src="Bilder/icons8-linkedin-50.png" alt="Linkedin Ikån"></a>
+        <a href="https://www.instagram.com/gaianinjalove/" target="_blank" rel="noopener"><img src="Bilder/icons8-insta-50.png" alt="instagram Ikån"></a>
         <p>Länkar till andra sidor</p>
         <ul>
             <li class="footer_list">Home</li>
