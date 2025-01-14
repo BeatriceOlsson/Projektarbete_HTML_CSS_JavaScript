@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="styleSheat.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bokresensioner Av Bea</title>
+    <link rel="icon" href="Bilder/icons8-book-64.png" sizes="16x16" type="image/png">
 </head>
 <body>
     <header><!--läg till bild/text som kommer att vara högst upp på sidan.Skall finas med på de andra sidorna-->
         <img src="Bilder/icons8-book-64.png" alt="Ikån av bok." title="Ikån av bok.">
         <h1>Min Virtuel Bibliotek</h1>
-        <ul>
-            <li class="header_list"><a href="index.html">Home</a></li>
-            <li class="header_list"><a href="book_page.html">Bok</a></li><!--Skappa en drop down med alternativ till sidor-->
-            <li class="header_list"><a href="about_me.html">Om Mig</a></li>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book_menu_page.html">Bok lista</a></li><!--Skappa en drop down med alternativ till sidor-->
+            <li onclick="dropDownFunction()" id="dropButton"><a>Senaste Böker</a></li>
+                <ul class="drop-down">
+                    <li><a href="book_page.html">Carry on Jeeves</a></li>
+                </ul>
+            <li><a href="about_me.html">Om Mig</a></li>
         </ul>
     </header>
     <section><!--Den senaste inlägda bock med bild och text. Kolla om den skall bryta efter en vis antal text och en klicka på läs mer knap.-->
@@ -44,10 +49,11 @@
         <a href="https://www.instagram.com/gaianinjalove/" target="_blank" rel="noopener"><img src="Bilder/icons8-insta-50.png" alt="instagram Ikån"></a>
         <p>Länkar till andra sidor</p>
         <ul>
-            <li class="footer_list">Home</li>
-            <li class="footer_list">Böker</li>
-            <li class="footer_list">Om Mig</li>
+            <li class="footer_list"><a href="index.html">Home</a></li>
+            <li class="footer_list"><a href="book_menu_page.html">Bok lista</a></li>
+            <li class="footer_list"><a href="about_me.html">Mig</a></li>
             <p>Sidan är skappad för lärande syfte och personlig utveckling som programerare.</p>
     </footer>
+    <script src="mittSkript1.js"></script>
 </body>
 </html>

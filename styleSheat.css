@@ -1,22 +1,87 @@
 body {
-    background-color: #E4E0E1;
-}
-header {
-    background-color:#D6C0B3;
-    
-}
-header>img {
-    background-color: aqua;
-    padding: 5px;
-    margin: 15px;
-    width: 50px;
-    height: auto;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #FBF5DD;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
 }
 
+header {
+    background-color:#A6CDC6;
+    grid-column: 1/-1;
+    grid-row: 1;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+header img {
+    /*background-color: aqua;*/
+    padding: 1rem;
+    padding-left: 2rem;
+    height: 6rem;
+    align-self: center;
+}
+header h1 {
+    /*background-color: aqua;*/
+    align-self: center;
+    font-size: 2.2rem;
+    padding: 1rem;
+    margin-left: -5rem;
+}
+header ul {
+    list-style: none;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    position: relative;
+}
+header li {
+    display: inline-block;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+.drop-down {
+    position: absolute;
+    display: none;
+    overflow: visible;
+    left: 15rem;
+    background-color: #A6CDC6;
+    border-radius: 1rem;
+}
+header li:last-child {
+    margin-right: 5rem;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+header li:hover {
+    background-color: #16404D;
+    color: #DDA853;
+    border-radius: 1rem;
+}
 button {
-    background-color: #AB886D;
+    background-color: #FBF5DD;
 }
 
 footer {
-    background-color: #D6C0B3;
+    grid-column: 1/5;
+    grid-row: 3/4;
+    background-color: #A6CDC6;
+}
+.index_book_page {
+    grid-column: 1/4;
+    grid-row: 2/2;
+}
+aside {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.bookCover {
+    grid-column: 3/4;
+    width: 30%;
+    height: auto;
 }
