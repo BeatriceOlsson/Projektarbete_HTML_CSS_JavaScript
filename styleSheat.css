@@ -6,6 +6,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
     gap: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -16,6 +17,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/*Förslag för att ge en lyxigare känsla av sidan*/
 }
 header img {
     /*background-color: aqua;*/
@@ -27,9 +29,11 @@ header img {
 header h1 {
     /*background-color: aqua;*/
     align-self: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: 1rem;
     margin-left: -5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 header ul {
     list-style: none;
@@ -38,6 +42,7 @@ header ul {
     position: relative;
 }
 header li {
+    font-size: 100%;
     display: inline-block;
     padding: 0.7rem;
     cursor: pointer;
@@ -47,11 +52,12 @@ header li {
     display: none;
     overflow: visible;
     left: 15rem;
-    background-color: #A6CDC6;
+
     border-radius: 1rem;
 }
 header li:last-child {
     margin-right: 5rem;
+    transform: scale(1.05);
 }
 header a {
     text-decoration: none;
@@ -62,26 +68,134 @@ header li:hover {
     color: #DDA853;
     border-radius: 1rem;
 }
-button {
-    background-color: #FBF5DD;
+@media screen and (max-width: 768px){
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header h1 {
+        margin-left:0;
+    }
+    header ul {
+        flex-direction: column;
+        padding-left: -1rem;
+    }
+    
+}
+.index_book_page {
+    grid-column: 1/4;
+    grid-row: 2/2;
+    padding: 1rem;
+    display: flex;
+}
+.bookCover {
+    display: flex;
+    max-height: 400px;
+    overflow: hidden;
+    padding: 1rem;
+    width: 30%;
+}
+.bookCover img {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.index-book {
+    flex: 1;
+    padding: 1rem;
+}
+.index-book h2 h3 {
+    position: relative;
+    float: left;
+    grid-column: 2/3;
+}
+.index-book h3 {
+    margin: 0;
+}
+.text-container {
+    max-height: 160px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+}
+.text-container.open{
+    max-height: none;
+    -webkit-line-clamp: unset;
+}
+.read-more {
+    cursor: pointer;
+    text-decoration: underline;
+}
+aside {
+    grid-column: 4;
+    grid-row: 2;
+}
+@media screen and (max-width: 768px){
+    .index_book_page {
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+    }
+    .bookCover {
+        align-self: center;
+        max-width: 200px;
+        width: 50%;
+        height: auto;
+    }
+    .index-book {
+        width: 100%;
+    }
+    aside {
+        display: none;
+    }
 }
 
 footer {
     grid-column: 1/5;
     grid-row: 3/4;
     background-color: #A6CDC6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/*Förslag för att ge en lyxigare känsla av sidan*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.index_book_page {
-    grid-column: 1/4;
-    grid-row: 2/2;
+footer p {
+    flex-basis: 40%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
-aside {
-    grid-column: 4;
-    grid-row: 2;
+.footer-img {
+    border: none;
+    flex-basis: 5%;
+    padding: 1rem;
 }
-
-.bookCover {
-    grid-column: 3/4;
-    width: 30%;
-    height: auto;
+footer ul {
+    flex-basis: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+    list-style: none
+}
+footer li a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+}
+footer li:hover {
+    background-color: #16404D;
+    padding: 0.4;
+    border-radius: 1rem;
+}
+@media screen and (max-width: 768px){
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer p {
+        min-width: 150px;
+    }
+    footer ul {
+        flex-direction: column;
+        white-space: nowrap;
+    }
 }

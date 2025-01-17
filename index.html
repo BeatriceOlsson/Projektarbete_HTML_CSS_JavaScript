@@ -12,7 +12,7 @@
 <body>
     <header><!--läg till bild/text som kommer att vara högst upp på sidan.Skall finas med på de andra sidorna-->
         <img src="Bilder/icons8-book-64.png" alt="Ikån av bok." title="Ikån av bok.">
-        <h1>Min Virtuel Bibliotek</h1>
+        <h1>Mitt Virtuela Bibliotek</h1>
         <ul class="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="book_menu_page.html">Bok lista</a></li><!--Skappa en drop down med alternativ till sidor-->
@@ -24,18 +24,24 @@
         </ul>
     </header>
     <section class="index_book_page"><!--Den senaste inlägda bock med bild och text. Kolla om den skall bryta efter en vis antal text och en klicka på läs mer knap.-->
-        <a href="book_page.html"><h2>Carry on, Jeeves</h2></a>
-        <img class="bookCover" src="Bilder/36544276.jpg" alt="Omslagsbild på bok" title="Omslagsbok på boken Carry on, Jeeves med utgåva år 2018" height="200px">
-        <h3>Förfatare: P.G.Wodehouse</h3>
-        <h3>Antal sidor: 304</h3>
-        <h3>Omdöme: 9/10</h3>
-        <h3>Utgivardatum: 2018-06-28</h3><!--Läg till ett max antal text som visas på sidan innan den avbryter texten-->
-        <p>I Carry On, Jeeves bjuder P.G. Wodehouse in läsarna till den underhållande världen kring Bertie Wooster och hans extraordinära betjänt, Jeeves. Denna samling med tio skickligt skrivna noveller följer Bertie – en charmig men hopplös ung gentleman – och Jeeves, vars sylvassa intelligens och felfria timing alltid är lösningen på de knipor Bertie ständigt råkar hamna i.<br>
-            Från att avvärja katastrofala förlovningar till att överlista besvärliga mostrar och reda ut romantiska förvecklingar för Berties lika förvirrade vänner, är Jeeves genialitet oöverträffad. Oavsett om han författar brev åt en bohemisk konstnär, bryter opassande förbindelser eller utformar listiga planer för att vinna över påstridiga släktingar, har Jeeves alltid en lösning.<br>
-            Varje berättelse sprakar av Wodehouses karakteristiska humor, fyndiga språk och absurt underhållande scenarier. Berties berättarröst – kvick, överdriven och charmigt naiv – utgör en perfekt kontrast till Jeeves lugna och behärskade framtoning. Tillsammans skapar de en dynamik som är en komisk fullträff, där livets missöden förvandlas till oändlig underhållning.<br>
-            Oavsett om det är The Artistic Career of Corky, där Jeeves försöker hjälpa en konstnär att vinna sin farbrors gillande, eller Clustering Round Young Bingo, som handlar om Berties hopplöst romantiske vän och hans senaste kärleksproblem, är varje berättelse i denna samling en riktig pärla. Jeeves, med sin osvikliga känsla för takt och sin tysta briljans, framstår alltid som hjälten, som räddar Bertie och hans vänner med lösningar som är lika geniala som de är roliga.<br>
-            Med sin humoristiska skildring av det brittiska överklassamhället driver Carry On, Jeeves lättsamt med de rikas lata livsstil, samtidigt som den levererar tidlös komedi. Med sina skarpt tecknade karaktärer, geniala intriger och gnistrande språk är denna samling perfekt för alla som älskar kvicka och lättsamma skratt.<br>
-            Kliv in i Bertie och Jeeves skrattretande värld, där ingen knipa är för absurd, ingen plan för komplicerad och inget herrskap-tjänsteförhållande lika underhållande som detta.</p>
+        <img class="bookCover" src="Bilder/36544276.jpg" alt="Omslagsbild på bok" title="Omslagsbok på boken Carry on, Jeeves med utgåva år 2018" >
+        <div class="index-book">
+            <a href="book_page.html"><h2>Carry on, Jeeves</h2></a>
+            <h3>Förfatare: P.G.Wodehouse</h3>
+            <h3>Antal sidor: 304</h3>
+            <h3>Omdöme: 9/10</h3>
+            <h3>Utgivardatum: 2018-06-28</h3><!--Läg till ett max antal text som visas på sidan innan den avbryter texten-->
+            <div class="text-container" id="text">
+                <p>I Carry On, Jeeves bjuder P.G. Wodehouse in läsarna till den underhållande världen kring Bertie Wooster och hans extraordinära betjänt, Jeeves. Denna samling med tio skickligt skrivna noveller följer Bertie – en charmig men hopplös ung gentleman – och Jeeves, vars sylvassa intelligens och felfria timing alltid är lösningen på de knipor Bertie ständigt råkar hamna i.<br>
+                    Från att avvärja katastrofala förlovningar till att överlista besvärliga mostrar och reda ut romantiska förvecklingar för Berties lika förvirrade vänner, är Jeeves genialitet oöverträffad. Oavsett om han författar brev åt en bohemisk konstnär, bryter opassande förbindelser eller utformar listiga planer för att vinna över påstridiga släktingar, har Jeeves alltid en lösning.<br>
+                    Varje berättelse sprakar av Wodehouses karakteristiska humor, fyndiga språk och absurt underhållande scenarier. Berties berättarröst – kvick, överdriven och charmigt naiv – utgör en perfekt kontrast till Jeeves lugna och behärskade framtoning. Tillsammans skapar de en dynamik som är en komisk fullträff, där livets missöden förvandlas till oändlig underhållning.<br>
+                    Oavsett om det är The Artistic Career of Corky, där Jeeves försöker hjälpa en konstnär att vinna sin farbrors gillande, eller Clustering Round Young Bingo, som handlar om Berties hopplöst romantiske vän och hans senaste kärleksproblem, är varje berättelse i denna samling en riktig pärla. Jeeves, med sin osvikliga känsla för takt och sin tysta briljans, framstår alltid som hjälten, som räddar Bertie och hans vänner med lösningar som är lika geniala som de är roliga.<br>
+                    Med sin humoristiska skildring av det brittiska överklassamhället driver Carry On, Jeeves lättsamt med de rikas lata livsstil, samtidigt som den levererar tidlös komedi. Med sina skarpt tecknade karaktärer, geniala intriger och gnistrande språk är denna samling perfekt för alla som älskar kvicka och lättsamma skratt.<br>
+                    Kliv in i Bertie och Jeeves skrattretande värld, där ingen knipa är för absurd, ingen plan för komplicerad och inget herrskap-tjänsteförhållande lika underhållande som detta.
+                </p>
+            </div>
+            <span onclick="readText()" class="read-more">Läs mer</span>
+        </div>
     </section>
     <aside><!--Lista på böcker som jag tänker läsa.-->
         <h3>Min läslista:</h3>
@@ -53,16 +59,14 @@
         </ol>
     </aside>
     <footer><!--Text om att sidan är utformad i lärande syfte samt länk till de andra sidorna.Skall finas med på de andra sidorna-->
-        <p>Tack för besöket på min hemsida.<br>Sidan är skappad för lärande syfte och personlig utveckling som programerare. </p>
-        <a href="https://www.facebook.com/beatrice.olsson.12" target="_blank" rel="noopener"><img src="Bilder/icons8-facebook-50 (1).png" alt="Facebok Ikån"> </a>
-        <a href="https://www.linkedin.com/in/beatrice-olsson/" target="_blank" rel="noopener"><img src="Bilder/icons8-linkedin-50.png" alt="Linkedin Ikån"></a>
-        <a href="https://www.instagram.com/gaianinjalove/" target="_blank" rel="noopener"><img src="Bilder/icons8-insta-50.png" alt="instagram Ikån"></a>
-        <p>Länkar till andra sidor</p>
+        <p>Tack för besöket på min hemsida.<br><small>Sidan är skappad för lärande syfte och personlig utveckling som programerare.</small></p>
+        <a class="footer-img" href="https://www.facebook.com/beatrice.olsson.12" target="_blank" rel="noopener"><img src="Bilder/icons8-facebook-50 (1).png" alt="Facebok Ikån"> </a>
+        <a class="footer-img" href="https://www.linkedin.com/in/beatrice-olsson/" target="_blank" rel="noopener"><img src="Bilder/icons8-linkedin-50.png" alt="Linkedin Ikån"></a>
+        <a class="footer-img" href="https://www.instagram.com/gaianinjalove/" target="_blank" rel="noopener"><img src="Bilder/icons8-insta-50.png" alt="instagram Ikån"></a>
         <ul>
             <li class="footer_list"><a href="index.html">Home</a></li>
             <li class="footer_list"><a href="book_menu_page.html">Bok lista</a></li>
             <li class="footer_list"><a href="about_me.html">Mig</a></li>
-            <p>Sidan är skappad för lärande syfte och personlig utveckling som programerare.</p>
     </footer>
     <script src="mittSkript1.js"></script>
 </body>
