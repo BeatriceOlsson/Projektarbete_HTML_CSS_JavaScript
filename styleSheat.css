@@ -52,7 +52,6 @@ header li {
     display: none;
     overflow: visible;
     left: 15rem;
-
     border-radius: 1rem;
 }
 header li:last-child {
@@ -67,6 +66,8 @@ header li:hover {
     background-color: #16404D;
     color: #DDA853;
     border-radius: 1rem;
+    scale: 1.1;
+    transition: 0.4s ease-in-out;
 }
 @media screen and (max-width: 768px){
     header {
@@ -113,13 +114,13 @@ header li:hover {
 .text-container {
     max-height: 160px;
     overflow: hidden;
-    transition: max-height 0.7s;
+    transition: max-height 1s ease-in-out 0.2s;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 7;
 }
 .text-container.open{
-    max-height: none;
+    max-height: 2000px;
     -webkit-line-clamp: unset;
 }
 .read-more {
@@ -143,7 +144,7 @@ aside {
         height: auto;
     }
     .index-book {
-        width: 100%;
+        width: 90%;
     }
     aside {
         display: none;
@@ -197,5 +198,52 @@ footer li:hover {
     footer ul {
         flex-direction: column;
         white-space: nowrap;
+    }
+}
+.book_page {
+    grid-column: 1/5;
+    grid-row: 2/2;
+    padding: 1rem;
+    display: flex;
+}
+.book_page_img {
+    max-height: 450px;
+    padding: 2rem;
+    width: 30%;
+    order: 1;
+}
+
+.book_page_text {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 3rem;
+}
+.book_page_text h3 {
+    margin: 0;
+}
+.book_page_text h2 {
+    margin-top: 5%;
+}
+.book_page_text p::first-letter {
+    font-size: xx-large;
+}
+@media screen and (max-width: 768px){
+    .book_page {
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
+    }
+    .book_page_img {
+        align-self: center;
+        max-width: 200px;
+        width: 50%;
+        height: auto;
+        order: 0;
+    }
+    .book_page_text {
+        width: 90%;
+    }
+    aside {
+        display: none;
     }
 }

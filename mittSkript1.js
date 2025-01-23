@@ -1,9 +1,10 @@
 function dropDownFunction() {
     const menyDropDown=document.getElementsByClassName("drop-down")[0];
-    if(menyDropDown.style.display === "none"){
-        menyDropDown.style.display="block";
-    } else {
+    console.log(menyDropDown.style);
+    if(menyDropDown.style.display === "block"){
         menyDropDown.style.display="none";
+    } else {
+        menyDropDown.style.display="block";
     }
 };
 
@@ -17,3 +18,4 @@ function readText() {
         document.querySelector(".read-more").innerText = "Läs Mindre";
     }
 };
+
