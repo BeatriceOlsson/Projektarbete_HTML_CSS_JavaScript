@@ -7,11 +7,12 @@ body {
     grid-template-rows: auto auto auto;
     gap: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 header {
     background-color:#A6CDC6;
-    grid-column: 1/-1;
+    grid-column: 1/5;
     grid-row: 1;
     display:flex;
     flex-wrap: wrap;
@@ -20,22 +21,20 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/*Förslag för att ge en lyxigare känsla av sidan*/
 }
 header img {
-    /*background-color: aqua;*/
     padding: 1rem;
     padding-left: 2rem;
     height: 6rem;
     align-self: center;
 }
 header h1 {
-    /*background-color: aqua;*/
     align-self: center;
     font-size: 2rem;
     padding: 1rem;
-    margin-left: -5rem;
     margin-top: 0;
     margin-bottom: 0;
 }
 header ul {
+    display: flex;
     list-style: none;
     align-items: flex-end;
     font-size: 1.3rem;
@@ -46,17 +45,18 @@ header li {
     display: inline-block;
     padding: 0.7rem;
     cursor: pointer;
+    position: relative;
 }
 .drop-down {
     position: absolute;
     display: none;
+    top: 100%;
     overflow: visible;
-    left: 15rem;
+    left: 13rem;
     border-radius: 1rem;
 }
 header li:last-child {
     margin-right: 5rem;
-    transform: scale(1.05);
 }
 header a {
     text-decoration: none;
@@ -69,20 +69,7 @@ header li:hover {
     scale: 1.1;
     transition: 0.4s ease-in-out;
 }
-@media screen and (max-width: 768px){
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    header h1 {
-        margin-left:0;
-    }
-    header ul {
-        flex-direction: column;
-        padding-left: -1rem;
-    }
-    
-}
+
 .index_book_page {
     grid-column: 1/4;
     grid-row: 2/2;
@@ -96,9 +83,7 @@ header li:hover {
     padding: 1rem;
     width: 30%;
 }
-.bookCover img {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+
 .index-book {
     flex: 1;
     padding: 1rem;
@@ -130,25 +115,6 @@ header li:hover {
 aside {
     grid-column: 4;
     grid-row: 2;
-}
-@media screen and (max-width: 768px){
-    .index_book_page {
-        grid-column: 1/-1;
-        display: flex;
-        flex-direction: column;
-    }
-    .bookCover {
-        align-self: center;
-        max-width: 200px;
-        width: 50%;
-        height: auto;
-    }
-    .index-book {
-        width: 90%;
-    }
-    aside {
-        display: none;
-    }
 }
 
 footer {
@@ -187,19 +153,7 @@ footer li:hover {
     padding: 0.4;
     border-radius: 1rem;
 }
-@media screen and (max-width: 768px){
-    footer {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    footer p {
-        min-width: 150px;
-    }
-    footer ul {
-        flex-direction: column;
-        white-space: nowrap;
-    }
-}
+
 .book_page {
     grid-column: 1/5;
     grid-row: 2/2;
@@ -212,8 +166,8 @@ footer li:hover {
     width: 30%;
     order: 1;
 }
-
 .book_page_text {
+    display: flex;
     flex-direction: column;
     margin-top: 0;
     margin-left: 3rem;
@@ -227,7 +181,96 @@ footer li:hover {
 .book_page_text p::first-letter {
     font-size: xx-large;
 }
+
+.meny_books {
+    grid-column: 1/-1;
+    columns: 3; /*Dellar upp innehålet i tre kolumer,Skappar en tnings print patern*/
+    -webkit-columns:3;/*Fyller samma funtion som column fast för äldre webbläsare*/
+    -moz-columns:3;
+    padding: 2rem;
+}
+.meny_books ul {
+    margin: 0;
+}
+
+.about_me {
+    grid-column: 1/-1;
+    grid-row: 2/2;
+    display: flex;
+    padding: 1rem;
+}
+.about_me img {
+    max-height: 20rem;
+    height: 450px;
+    width: auto;
+    padding: 2em;
+    order: 1;
+}
+.about_me_text {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    padding: 1rem;
+}
+.about_me_text form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about_me_text button {
+    border: 1rem;
+    margin: 1rem;
+
+}
+
 @media screen and (max-width: 768px){
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header h1 {
+        margin-left:0;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header li:last-child {
+        margin: 0;
+    }
+    .drop-down {
+        left: 60%;
+        top: 50%;
+    }
+    .index_book_page {
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+    }
+    .bookCover {
+        align-self: center;
+        max-width: 200px;
+        width: 50%;
+        height: auto;
+    }
+    .index-book {
+        width: 90%;
+    }
+    aside {
+        display: none;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer p {
+        min-width: 150px;
+        order: 1;
+    }
+    footer ul {
+        flex-direction: column;
+        white-space: nowrap;
+    }
     .book_page {
         grid-column: 1/5;
         display: flex;
@@ -235,7 +278,6 @@ footer li:hover {
     }
     .book_page_img {
         align-self: center;
-        max-width: 200px;
         width: 50%;
         height: auto;
         order: 0;
@@ -245,5 +287,41 @@ footer li:hover {
     }
     aside {
         display: none;
+    }
+    .meny_books {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .about_me {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .about_me img {
+        align-self: center;
+        order: 0;
+        max-width: 70%;
+        height: auto;
+    }
+    .form {
+        display: none;
+    }
+}
+@media screen and (min-width:769px) and (max-width: 1059px){
+    header {
+        justify-content: center;
+    }
+    .bookCover {
+        width: auto;
+        max-height: 300px
+    }
+    .book_page_img {
+        width: auto;
+        }
+    .about_me img {
+        max-width: 60%;
+        height: auto;
     }
 }

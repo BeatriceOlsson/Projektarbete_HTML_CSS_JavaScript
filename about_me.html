@@ -10,12 +10,12 @@
     <link rel="icon" href="Bilder/icons8-book-64.png" sizes="16x16" type="image/png">
 </head>
 <body>
-    <header><!--läg till bild/text som kommer att vara högst upp på sidan.Skall finas med på de andra sidorna-->
+    <header>
         <img src="Bilder/icons8-book-64.png" alt="Ikån av bok." title="Ikån av bok.">
         <h1>Min Virtuel Bibliotek</h1>
         <ul class="list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="book_menu_page.html">Bok lista</a></li><!--Skappa en drop down med alternativ till sidor-->
+            <li><a href="book_menu_page.html">Bok lista</a></li>
             <li onclick="dropDownFunction()" id="dropButton"><a>Senaste Böker</a></li>
                 <ul class="drop-down">
                     <li><a href="book_page.html">Carry on Jeeves</a></li>
@@ -23,25 +23,29 @@
             <li><a href="about_me.html">Om Mig</a></li>
         </ul>
     </header>
-    <section><!--Den senaste inlägda bock med bild och text. Kolla om den skall bryta efter en vis antal text och en klicka på läs mer knap.-->
+    <section class="about_me">
         <img src="Bilder/20190107_103359.jpg" alt="Bild på mig" title="Bild på mig skapparen av sidan" width="500px" height="auto">
-        <h2>Hej och välkommen!</h2>
-        <p>
-            Jag är en driven, engagerad och naturlig ledare med lång erfarenhet av att leda projekt och samarbeten, både lokalt och på distans. Med mina kompetenser, erfarenheter och egenskaper är jag övertygad om att jag kan möta och hantera vilka rimliga utmaningar som helst.<br>
-            För mig var det aldrig en fråga om att välja mitt yrke – det var nästan som att det valde mig. Redan på gymnasiet, som ensam tjej i klassen, märkte jag att mina klasskamrater ofta vände sig till mig när det behövdes struktur, samarbete och ledarskap. Tillsammans med en skolkamrat tog jag initiativet att starta upp elevrådet, där jag också blev ordförande. Den erfarenheten bekräftade min passion för att organisera, ta ansvar och se till att saker blev gjorda – något som har följt mig genom hela min karriär.<br>
-            Som projektledare lägger jag stor vikt vid att agera med omtanke och professionalism. Jag tror starkt på att lyssna aktivt, se helheten, hantera komplexa situationer med lugn och fatta välgrundade beslut. Detta, kombinerat med mitt examensarbete om kommunikation, har gett mig en djup förståelse för hur effektivt samspel skapar framgångsrika projekt.<br>
-            Jag har också erfarenhet av att leda projekt på engelska och att arbeta remote med internationella team, vilket har gett mig en bred förståelse för olika arbetskulturer och sätt att samarbeta. Tjänsteresor, från planering till genomförande och dokumentation, är en annan del där jag känner mig helt hemma.<br>
-            Med ett fotografiskt minne har jag en förmåga att snabbt ta till mig ny information och nya kunskaper – jag älskar att lära mig och ser fram emot varje ny utmaning. Tidigare chefer och kollegor har beskrivit mig som professionell, lojal, plikttrogen och lösningsorienterad. Jag är dessutom noggrann, trygg och lyhörd, och jag värdesätter alltid arbetsgruppens välmående högt.<br>
-            Oavsett vad jag tar mig an, är mitt mål att skapa struktur, tydlighet och framgång – och att samtidigt bidra till en positiv och produktiv arbetsmiljö.</p>
-        <p>Skicka ett <a href="beatrice-olsson@hotmail.com">mail</a> med ditt bok förslag</p>
+        <div class="about_me_text">
+            <h2>Hej och välkommen!</h2>
+            <p>
+                Jag är en driven, engagerad och naturlig ledare med lång erfarenhet av att leda projekt och samarbeten, både lokalt och på distans. Med mina kompetenser, erfarenheter och egenskaper är jag övertygad om att jag kan möta och hantera vilka rimliga utmaningar som helst.<br>
+                För mig var det aldrig en fråga om att välja mitt yrke – det var nästan som att det valde mig. Redan på gymnasiet, som ensam tjej i klassen, märkte jag att mina klasskamrater ofta vände sig till mig när det behövdes struktur, samarbete och ledarskap. Tillsammans med en skolkamrat tog jag initiativet att starta upp elevrådet, där jag också blev ordförande. Den erfarenheten bekräftade min passion för att organisera, ta ansvar och se till att saker blev gjorda – något som har följt mig genom hela min karriär.<br>
+                Som projektledare lägger jag stor vikt vid att agera med omtanke och professionalism. Jag tror starkt på att lyssna aktivt, se helheten, hantera komplexa situationer med lugn och fatta välgrundade beslut. Detta, kombinerat med mitt examensarbete om kommunikation, har gett mig en djup förståelse för hur effektivt samspel skapar framgångsrika projekt.<br>
+                Jag har också erfarenhet av att leda projekt på engelska och att arbeta remote med internationella team, vilket har gett mig en bred förståelse för olika arbetskulturer och sätt att samarbeta. Tjänsteresor, från planering till genomförande och dokumentation, är en annan del där jag känner mig helt hemma.<br>
+                Med ett fotografiskt minne har jag en förmåga att snabbt ta till mig ny information och nya kunskaper – jag älskar att lära mig och ser fram emot varje ny utmaning. Tidigare chefer och kollegor har beskrivit mig som professionell, lojal, plikttrogen och lösningsorienterad. Jag är dessutom noggrann, trygg och lyhörd, och jag värdesätter alltid arbetsgruppens välmående högt.<br>
+                Oavsett vad jag tar mig an, är mitt mål att skapa struktur, tydlighet och framgång – och att samtidigt bidra till en positiv och produktiv arbetsmiljö.</p>
+            <p>Skicka ett <a href="beatrice-olsson@hotmail.com">mail</a> med ditt bok förslag</p>
+                <form action="/sumit" method="post">
+                    <p>Lämna gärna en komentar om vilken eller vilka böker du skulle rekomendera samt vad du hade gjort anorlunda om du hade en engen virtuel bibliotek.</p>
+                    <label for="aboutMeComent"><h3>Kommentar</h3></label>
+                    <textarea id="aboutMeComent" name="aboutMeComent" rows="4" cols="50"></textarea>
+                <div><!--Är till för att kanpparna skall liga i row-->
+                    <button type="submit"><h3>Skicka</h3></button>
+                    <button type="reset"><h3>Ta bort</h3></button>
+                </div>
+            </form>
+        </div>
     </section>
-    <form action="/sumit" method="post">
-        <p>Lämna gärna en komentar om vilken eller vilka böker du skulle rekomendera samt vad du hade gjort anorlunda om du hade en engen virtuel bibliotek.</p>
-        <label for="aboutMeComent"><h3>Kommentar</h3></label>
-        <textarea id="aboutMeComent" name="aboutMeComent" rows="4" cols="50"></textarea>
-        <button type="submit"><h3>Skicka</h3></button>
-        <button type="reset"><h3>Ta bort</h3></button>
-    </form>
     <footer><!--Text om att sidan är utformad i lärande syfte samt länk till de andra sidorna.Skall finas med på de andra sidorna-->
         <p>Tack för besöket på min hemsida.<br><small>Sidan är skappad för lärande syfte och personlig utveckling som programerare.</small></p>
         <a class="footer-img" href="https://www.facebook.com/beatrice.olsson.12" target="_blank" rel="noopener"><img src="Bilder/icons8-facebook-50 (1).png" alt="Facebok Ikån"> </a>
