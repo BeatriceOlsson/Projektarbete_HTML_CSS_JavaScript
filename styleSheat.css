@@ -72,18 +72,16 @@ header li:hover {
 
 .index_book_page {
     grid-column: 1/4;
-    grid-row: 2/2;
+    grid-row: 2;
     padding: 1rem;
     display: flex;
 }
 .bookCover {
-    display: flex;
     max-height: 400px;
     overflow: hidden;
     padding: 1rem;
     width: 30%;
 }
-
 .index-book {
     flex: 1;
     padding: 1rem;
@@ -96,19 +94,19 @@ header li:hover {
 .index-book h3 {
     margin: 0;
 }
-.text-container {
+.text-container {/*Håller instälningar för drop down function*/
     max-height: 160px;
-    overflow: hidden;
+    overflow: hidden;/*Döljer texten som inte visas*/
     transition: max-height 1s ease-in-out 0.2s;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;/*Behövs för funtinen under då den förbereder för den*/
+    -webkit-line-clamp: 7;/*Begränsar antalet rader som visas samt lägger till ... i slutet*/
 }
 .text-container.open{
     max-height: 2000px;
-    -webkit-line-clamp: unset;
+    -webkit-line-clamp: unset;/*Ändrar värdet från 7 till ospesifickt*/
 }
-.read-more {
+.read-more { 
     cursor: pointer;
     text-decoration: underline;
 }
@@ -121,7 +119,7 @@ footer {
     grid-column: 1/5;
     grid-row: 3/4;
     background-color: #A6CDC6;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/*Förslag för att ge en lyxigare känsla av sidan*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/*Förslag för att ge ett djup*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,6 +130,7 @@ footer p {
     padding-right: 1%;
 }
 .footer-img {
+    align-self: center;
     border: none;
     flex-basis: 5%;
     padding: 1rem;
@@ -163,8 +162,7 @@ footer li:hover {
 .book_page_img {
     max-height: 450px;
     padding: 2rem;
-    width: 30%;
-    order: 1;
+    order: 1;/*Plaserar bilden till höger*/
 }
 .book_page_text {
     display: flex;
@@ -184,9 +182,8 @@ footer li:hover {
 
 .meny_books {
     grid-column: 1/-1;
-    columns: 3; /*Dellar upp innehålet i tre kolumer,Skappar en tnings print patern*/
-    -webkit-columns:3;/*Fyller samma funtion som column fast för äldre webbläsare*/
-    -moz-columns:3;
+    columns: 3; /*Dellar upp innehålet i tre kolumer,Skappar en tidnings print patern. Behövs för att Fierfox skall fungera*/
+    -webkit-columns:3;/*Fyller samma funtion som column fast för äldre webbläsare. Behövs för att Crome & Edge skall fungera*/
     padding: 2rem;
 }
 .meny_books ul {
@@ -201,15 +198,11 @@ footer li:hover {
 }
 .about_me img {
     max-height: 20rem;
-    height: 450px;
     width: auto;
     padding: 2em;
     order: 1;
 }
 .about_me_text {
-    display: flex;
-    flex-direction: column;
-    clear: both;
     padding: 1rem;
 }
 .about_me_text form {
@@ -218,7 +211,6 @@ footer li:hover {
     align-items: center;
 }
 .about_me_text button {
-    border: 1rem;
     margin: 1rem;
 
 }
@@ -238,10 +230,11 @@ footer li:hover {
     header li:last-child {
         margin: 0;
     }
-    .drop-down {
+    .drop-down {/*Plaserar den korekt vid litten skärm*/
         left: 60%;
         top: 50%;
     }
+
     .index_book_page {
         grid-column: 1/-1;
         display: flex;
@@ -254,26 +247,27 @@ footer li:hover {
         height: auto;
     }
     .index-book {
-        width: 90%;
+        width: 90%;/*Hade problem med text utanför box så skapat för att säckra att ta bort detta*/
     }
-    aside {
+    aside {/*Gömer den då det inte är visentlig information och skulle dra ner på användaruplevelsen*/
         display: none;
     }
+
     footer {
         display: flex;
         flex-wrap: wrap;
     }
-    footer p {
-        min-width: 150px;
+    footer p {/*Ikånerna delade på sig så flyttade texten för bätre upplevelse*/
+        width: 90%;
+        padding: 0;
         order: 1;
     }
     footer ul {
         flex-direction: column;
         white-space: nowrap;
     }
+
     .book_page {
-        grid-column: 1/5;
-        display: flex;
         flex-direction: column;
     }
     .book_page_img {
@@ -283,10 +277,9 @@ footer li:hover {
         order: 0;
     }
     .book_page_text {
+        margin: 0;
+        padding: 0.5em;
         width: 90%;
-    }
-    aside {
-        display: none;
     }
     .meny_books {
         display: flex;
@@ -305,11 +298,8 @@ footer li:hover {
         max-width: 70%;
         height: auto;
     }
-    .form {
-        display: none;
-    }
 }
-@media screen and (min-width:769px) and (max-width: 1059px){
+@media screen and (min-width:769px) and (max-width: 1059px){/*För de dellar som behöver ändras innan mobil*/
     header {
         justify-content: center;
     }
@@ -321,7 +311,13 @@ footer li:hover {
         width: auto;
         }
     .about_me img {
-        max-width: 60%;
+        max-width: 50%;
+        padding: 1rem;
         height: auto;
+    }
+}
+@media screen and (max-width:424px) {
+    .about_me_text form {/*Då den inte skallars ner efter denna storleken*/
+        display: none;
     }
 }
