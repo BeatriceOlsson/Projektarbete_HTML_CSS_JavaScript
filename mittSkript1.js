@@ -7,7 +7,7 @@ function dropDownFunction() { //Dropdown function i menyn
 };
 const menyDropDown=document.getElementsByClassName("drop-down")[0];    //hemtar status av drop down. [0] behövs för att hämta datta
 
-function readText() { //Read more på index
+function readText() { //Read more på index funtion
     const textContainer=document.getElementById("text");
     if(textContainer.classList.contains("open")){   //Kollar statusen på classen kopplad till id="text"
         textContainer.classList.remove("open");
@@ -32,7 +32,7 @@ imgBook?.addEventListener("click", () => {
     imgBook.src = images[imageShowing]; //Byter till den bilden som motsvara plaseringen i array
 });
 
-
+//Funtion för knapp i form i Om mig
 const userSumitButtom=document.getElementById("about_me_form");
 userSumitButtom?.addEventListener('submit', (event) =>{
     event.preventDefault();
