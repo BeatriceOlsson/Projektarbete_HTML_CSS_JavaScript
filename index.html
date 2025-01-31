@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Sida i lärande syfte där jag skapparen av sidan kan skriva mina omdömen för bökerna jag läser">
+    <meta name="description" content="Hemsida i lärande syfte där jag skapparen av sidan kan skriva mina omdömen för bökerna jag läser">
     <meta name="author" content="Beatrice olsson">
     <link rel="stylesheet" href="styleSheat.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +10,14 @@
     <link rel="icon" href="Bilder/icons8-book-64.png" sizes="16x16" type="image/png">
 </head>
 <body>
-    <header><!--läg till bild/text som kommer att vara högst upp på sidan.Skall finas med på de andra sidorna-->
+    <header><!---->
         <img src="Bilder/icons8-book-64.png" alt="Ikån av bok." title="Ikån av bok.">
         <h1>Mitt Virtuela Bibliotek</h1>
         <ul class="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="book_menu_page.html">Bok lista</a></li><!--Skappa en drop down med alternativ till sidor-->
-            <li onclick="dropDownFunction()" id="dropButton"><a>Senaste Böker</a></li>
-                <ul class="drop-down" style="display: none;">
+            <li onclick="dropDownFunction()" id="dropButton"><a>Senaste Böker</a></li><!--Kallar på funtionen-->
+                <ul class="drop-down" style="display: none;"><!--JavaScript kollar status av drop down-->
                     <li><a href="book_page.html">Carry on Jeeves</a></li>
                 </ul>
             <li><a href="about_me.html">Om Mig</a></li>
@@ -31,7 +31,7 @@
             <h3>Antal sidor: 304</h3>
             <h3>Omdöme: 9/10</h3>
             <h3>Utgivardatum: 2018-06-28</h3>
-            <div class="text-container" id="text">
+            <div class="text-container" id="text"><!--JavaScript kollar status om open-->
                 <p>I Carry On, Jeeves bjuder P.G. Wodehouse in läsarna till den underhållande världen kring Bertie Wooster och hans extraordinära betjänt, Jeeves. Denna samling med tio skickligt skrivna noveller följer Bertie – en charmig men hopplös ung gentleman – och Jeeves, vars sylvassa intelligens och felfria timing alltid är lösningen på de knipor Bertie ständigt råkar hamna i.<br>
                     Från att avvärja katastrofala förlovningar till att överlista besvärliga mostrar och reda ut romantiska förvecklingar för Berties lika förvirrade vänner, är Jeeves genialitet oöverträffad. Oavsett om han författar brev åt en bohemisk konstnär, bryter opassande förbindelser eller utformar listiga planer för att vinna över påstridiga släktingar, har Jeeves alltid en lösning.<br>
                     Varje berättelse sprakar av Wodehouses karakteristiska humor, fyndiga språk och absurt underhållande scenarier. Berties berättarröst – kvick, överdriven och charmigt naiv – utgör en perfekt kontrast till Jeeves lugna och behärskade framtoning. Tillsammans skapar de en dynamik som är en komisk fullträff, där livets missöden förvandlas till oändlig underhållning.<br>
@@ -40,7 +40,7 @@
                     Kliv in i Bertie och Jeeves skrattretande värld, där ingen knipa är för absurd, ingen plan för komplicerad och inget herrskap-tjänsteförhållande lika underhållande som detta.
                 </p>
             </div>
-            <span onclick="readText()" class="read-more">Läs mer</span>
+            <span onclick="readText()" class="read-more">Läs mer</span><!--Kallar på funtion av expandering av text samt uppdateras av JavaScript-->
         </div>
     </section>
     <aside><!--Lista på böcker som jag tänker läsa.-->
@@ -67,6 +67,6 @@
             <li class="footer_list"><a href="book_menu_page.html">Bok lista</a></li>
             <li class="footer_list"><a href="about_me.html">Mig</a></li>
     </footer>
-    <script src="mittSkript1.js"></script>
+    <script src="mittSkript1.js"></script><!--Valde att plasera scriptet längst ner då sidan ladas först och sen hämtas data från JavaScript-->
 </body>
 </html>

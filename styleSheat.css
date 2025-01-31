@@ -48,12 +48,16 @@ header li {
     position: relative;
 }
 .drop-down {
+    background-color:#A6CDC6;
+    display:none;
     position: absolute;
-    display: none;
     top: 100%;
     overflow: visible;
     left: 13rem;
     border-radius: 1rem;
+}
+.drop-down.block {
+    display: block;
 }
 header li:last-child {
     margin-right: 5rem;
@@ -233,6 +237,7 @@ footer li:hover {
     .drop-down {/*Plaserar den korekt vid litten skärm*/
         left: 60%;
         top: 50%;
+        background-color: transparent;
     }
 
     .index_book_page {
